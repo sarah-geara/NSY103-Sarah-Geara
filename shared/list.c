@@ -82,7 +82,7 @@ int list_find(list_t* l, const void* element)
 
 void list_clear(list_t* list, unsigned int freedata)
 {
-	if (freedata == YES)
+	if (freedata == 1)
 	{
 		for (int i = 0; i < list->size; i++)
 			free(list->_data[i]);
@@ -94,7 +94,7 @@ void list_clear(list_t* list, unsigned int freedata)
 
 void list_free(list_t* l, unsigned int freedata)
 {
-	if (freedata == YES)
+	if (freedata == 1)
 	{
 		for (int i = 0; i < l->size; i++)
 			free(l->_data[i]);
